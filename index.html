@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bob Truck Company</title>
+        
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            :root {
+                --navy: #0a2342;
+                --orange: #f0713a;
+                --white: #ffffff;
+                --light-grey: #f4f4f4;
+                --text-dark: #2b2b2b;
+            }
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                color: var(--text-dark);
+                line-height: 1.5;
+            }
+            nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: var(--navy);
+                padding: 20px 40px;
+            }
+            nav h2 {
+                color: var(--white);
+            }
+            nav a {
+                color: var(--white);
+                text-decoration: none;
+                margin-left: 25px;
+                font-weight: 500;
+                transition: color 0.2s;
+            }
+            nav a:hover {
+                color: var(--orange);
+            }
+            .hero {
+                background: linear-gradient(rgba(10,35,66,0.75), rgba(10,35,66,0.75)), url('images/hero-truck.jpg');
+                background-size: cover;
+                background-position: center;
+                color: var(--white);
+                text-align: center;
+                padding: 120px 20px;
+            }
+            .hero h1 {
+                font-size: 3rem;
+                margin-bottom: 20px;
+            }
+            .hero p {
+                font-size: 1.2rem;
+                margin-bottom: 30px;
+            }
+            .hero button {
+                background-color: var(--orange);
+                color: var(--white);
+                border: none;
+                padding: 15px 35px;
+                font-size: 1rem;
+                font-weight: 600;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: transform 0.2s, background-color 0.2s;
+            }
+            .hero button:hover {
+                background-color: #d85f2c;
+                transform: translateY(-2px);
+            }
+            .services {
+                padding: 80px 20px;
+                text-align: center;
+            }
+            .services h2 {
+                font-size: 2rem;
+                margin-bottom: 40px;
+            }
+            .card-container {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 25px;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+            .card-container > div {
+                background-color: var(--light-grey);
+                padding: 30px 20px;
+                border-radius: 8px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+                transition: transform 0.2s, box-shadow 0.2s;
+            }
+            .card-container > div:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 6px 16px rgba(0,0,0,0.12)
+            }
+            .card-container h3 {
+                color: var(--navy);
+                margin-bottom: 12px;
+            }
+            .about {
+                display: flex;
+                align-items: center;
+                gap: 50px;
+                padding: 80px 40px;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+            .about-text {
+                flex: 1;
+            }
+            .about-text h2 {
+                color: var(--navy);
+                font-size: 2rem;
+                margin-bottom: 20px;
+
+            }
+            .about-text p {
+                margin-bottom: 15px;
+            }
+            .about-image {
+                flex: 1;
+            }
+            .about-image img {
+                width: 100%;
+                height: 400px;
+                object-fit: cover;
+                border-radius: 8px;
+            }
+            @media (max-width: 600px) {
+                .about {
+                    flex-direction: column;
+                }
+                .stats {
+                    flex-direction: column;
+                    gap: 30px;
+                }
+            }
+            .fleet {
+                background-color: var(--navy);
+                padding: 60px 20px;
+            }
+            .stats {
+                display: flex;
+                justify-content: space-around;
+                max-width: 1000px;
+                margin: 0 auto;
+                text-align: center;
+            }
+            .stats h2 {
+                color: var(--orange);
+                font-size: 2.8rem;
+                margin-bottom: 8px;
+            }
+            .stats p {
+                color: var(--white);
+                font-size: 1rem;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+            footer {
+                background-color: var(--text-dark);
+                color: var(--white);
+                text-align: center;
+                padding: 50px 20px;
+            }
+            footer h3 {
+                color: var(--orange);
+                margin-bottom: 15px;
+            }
+            footer p {
+                margin-bottom: 8px;
+                font-size: 0.95rem;
+            }
+            html {
+                scroll-behavior: smooth;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <h2>Bob Trucking</h2>
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#fleet">Fleet</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <!--hero section-->
+        <section class="hero">
+            <h1>Reliable Freight,Delivered On Time</h1>
+            <p>Trusted freight and logistics solution for business</p>
+            <button>Get a Quote</button>
+
+        </section>
+        <!--services section-->
+        <section class="services" id="services">
+            <div class="card-container">
+                <div>
+                    <h3>Long-Haul Freight</h3>
+                    <p>Coast-to-coast shipping with real-time tracking and dedicated drivers.</p>
+                </div>
+
+                <div>
+                    <h3>Local Delivery</h3>
+                    <p>Fast,reliable delivery within the region for time-sensitive shipments.</p>
+                </div>
+
+                <div>
+                    <h3>Logistics</h3>
+                    <p>End-to-end supply chain planning tailored to your business needs.</p>
+                </div>
+
+                <div>
+                        <h3>Equipment Hauling</h3>
+                        <p>Specialized transport for heavy machinery and oversized loads.</p>
+                </div>
+
+            </div>
+
+        </section>
+        <!--about section-->
+        <section class="about" id="about">
+            <div class="about-text">
+                <h2>About Bob Trucking</h2>
+                <p>For over 20 years, Bob Trucking Company has been trusted name in freight and logistics. What started as a sngle truck and a commitment to reliability has grown into a full-service fleet serving business across the region.</p>
+                <p>We belive in showing up on time, communicating clearly, and treating every shipment like it's our own. That's why companies keep coming back to us years after years.</p>
+            </div>
+            <div class="about-image">
+                <img src="image/fleet-photo.jpg" alt="placeholder truck image">
+            </div>
+
+        </section>
+        <!--fleet section-->
+        <section class="fleet" id="fleet">
+            <div class="stats">
+                <div><h2>500+</h2><p>Truck in Fleet</p></div>
+                <div><h2>20 Years</h2><p>In Business</p></div>
+                <div><h2>98%</h2><p>On-Time Delivery</p></div>
+
+            </div>
+        </section>
+    <!--footer section-->
+    <footer id="contact">
+        <h3>Contact Us</h3>
+        <p>1234 Freight Way, Springfield</p>
+        <p>Phone: +254 757 820 415, Email: edwinmbabumuremi@gmail.com</p>
+        <p>&copy; 2026. All right reserved</p>
+
+    </footer>
+    </body>
+</html>
